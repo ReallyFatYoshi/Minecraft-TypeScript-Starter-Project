@@ -111,8 +111,8 @@ function package_packs(callbackFunction) {
     cwd: __dirname
   })
 
-  bpack.pipe(fs.createWriteStream(__dirname + '/dist/' + bpfoldername + '.zip'));
-  rpack.pipe(fs.createWriteStream(__dirname + '/dist/' + rpfoldername + '.zip'));
+  bpack.pipe(fs.createWriteStream(__dirname + '/dist/' + bpfoldername + '.mcpack'));
+  rpack.pipe(fs.createWriteStream(__dirname + '/dist/' + rpfoldername + '.mcpack'));
 
   bpack.finalize();
   rpack.finalize();
