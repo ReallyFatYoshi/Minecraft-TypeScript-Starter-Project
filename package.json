@@ -1,0 +1,74 @@
+{
+	"name": "scripting-starter",
+	"version": "0.1.0",
+	"productName": "Minecraft TypeScript Starter Project",
+	"description": "Minecraft TypeScript Starter Project",
+	"private": true,
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^6.4.0",
+		"archiver": "^7.0.1",
+		"del": "^6.0.0",
+		"eslint": "^8.0.1",
+		"eslint-config-love": "^43.1.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-import": "^2.25.2",
+		"eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+		"eslint-plugin-promise": "^6.0.0",
+		"gulp": "^4.0.2",
+		"gulp-cli": "^2.3.0",
+		"gulp-esbuild": "^0.11.2",
+		"gulp-sourcemaps": "^3.0.0",
+		"husky": "^9.0.11",
+		"lint-staged": "^15.2.2",
+		"prettier": "3.2.5",
+		"typescript": "^4.9.5"
+	},
+	"scripts": {
+		"enablemcloopback": "CheckNetIsolation.exe LoopbackExempt -a -p=S-1-15-2-1958404141-86561845-1752920682-3514627264-368642714-62675701-733520436",
+		"enablemcpreviewloopback": "CheckNetIsolation.exe LoopbackExempt -a -p=S-1-15-2-424268864-5579737-879501358-346833251-474568803-887069379-4040235476",
+		"prepare": "husky"
+	},
+	"dependencies": {
+		"@minecraft/server": "1.10.0-beta.1.20.70-stable",
+		"@minecraft/server-ui": "1.2.0-beta.1.20.70-stable"
+	},
+	"prettier": {
+		"trailingComma": "es5",
+		"tabWidth": 2,
+		"semi": true,
+		"singleQuote": true,
+		"useTabs": true,
+		"bracketSpacing": true,
+		"arrowParens": "always",
+		"printWidth": 120
+	},
+	"eslintConfig": {
+		"env": {
+			"es2021": true,
+			"node": true
+		},
+		"extends": [
+			"love",
+			"prettier"
+		],
+		"parserOptions": {
+			"ecmaVersion": "latest",
+			"sourceType": "module"
+		},
+		"rules": {
+			"semi": [
+				"error",
+				"always"
+			],
+			"quotes": [
+				"error",
+				"single"
+			]
+		}
+	},
+	"lint-staged": {
+		"**/*": [
+			"prettier --write --ignore-unknown"
+		]
+	}
+}

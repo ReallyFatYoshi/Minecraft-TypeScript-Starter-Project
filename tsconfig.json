@@ -1,0 +1,33 @@
+{
+	"compilerOptions": {
+		"target": "ES2017",
+		"moduleResolution": "node",
+		"module": "ESNext",
+		"declaration": false,
+		"lib": ["ESNext", "DOM"],
+		"noLib": false,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"sourceMap": true,
+		"pretty": true,
+		"forceConsistentCasingInFileNames": true,
+		"strict": true,
+		"allowUnreachableCode": true,
+		"allowUnusedLabels": true,
+		"noImplicitAny": true,
+		"noImplicitReturns": false,
+		"noImplicitUseStrict": false,
+		"outDir": "build/",
+		"rootDir": ".",
+		"listFiles": false,
+		"noEmitHelpers": true,
+		"resolveJsonModule": true,
+		"baseUrl": ".",
+		"paths": {
+			"@": ["*"]
+		}
+	},
+	"include": ["scripts/**/*"],
+	"exclude": ["node_modules"],
+	"compileOnSave": false
+}

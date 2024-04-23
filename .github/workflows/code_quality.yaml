@@ -1,0 +1,19 @@
+name: ⌨️ Code quality
+on: ['pull_request']
+jobs:
+  linter:
+    name: 👀 Linter
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v3
+        with:
+          version: latest
+          run_install: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: |
+          pnpm install
+          pnpm exec lint-staged
